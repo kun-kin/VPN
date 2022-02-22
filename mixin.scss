@@ -1,0 +1,32 @@
+@mixin breackpoint($point) {
+    @if $point==mobile {
+        @media screen and (max-width: 540px) {
+            @content;
+        }
+    }
+    @else if $point==mobileland {
+        @media screen and (min-width: 540px) and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==tablet {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==tabletland {
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point==desktop {
+        @media screen and (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point==change1 {
+        @media screen and (min-width: 768px) and (max-width: 1300px) {
+            @content;
+        }
+    }
+}
