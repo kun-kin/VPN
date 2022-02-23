@@ -23,6 +23,10 @@ p {
   margin: 0 auto;
 }
 
+.hueR {
+  filter: hue-rotate(3.142rad);
+}
+
 header {
   padding: 0 15px;
 }
@@ -71,6 +75,11 @@ header .container .header-connect button {
   text-transform: capitalize;
   background: transparent;
   border: none;
+}
+@media screen and (max-width: 540px) {
+  header .container .header-connect button {
+    padding: 10px 16px;
+  }
 }
 header .container .header-connect button:hover {
   border: 1px solid #F53855;
@@ -303,6 +312,11 @@ main .plan {
   padding: 80px 0;
   text-align: center;
 }
+@media screen and (max-width: 540px) {
+  main .plan {
+    padding: 16px 0;
+  }
+}
 main .plan .container h4 {
   font-weight: 500;
   font-size: 35px;
@@ -357,6 +371,12 @@ main .plan .container .plan-card .plan-card-item {
 @media screen and (min-width: 540px) and (max-width: 768px) {
   main .plan .container .plan-card .plan-card-item {
     min-height: 510px;
+  }
+}
+@media screen and (max-width: 540px) {
+  main .plan .container .plan-card .plan-card-item {
+    min-height: 550px;
+    margin-bottom: 24px;
   }
 }
 main .plan .container .plan-card .plan-card-item:hover {
@@ -479,6 +499,11 @@ main .network {
   margin-top: 70px;
   text-align: center;
 }
+@media screen and (max-width: 540px) {
+  main .network {
+    margin-top: 16px;
+  }
+}
 main .network h4 {
   font-weight: 500;
   font-size: 35px;
@@ -528,9 +553,19 @@ main .slide {
     margin: 50px 0 60px;
   }
 }
+@media screen and (max-width: 540px) {
+  main .slide {
+    margin: 50px 0;
+  }
+}
 main .slide .swiper-container {
   width: 100%;
   padding: 0 20px;
+}
+@media screen and (max-width: 540px) {
+  main .slide .swiper-container {
+    padding: 0;
+  }
 }
 main .slide .swiper-slide {
   background-size: cover;
@@ -667,6 +702,19 @@ main .customer .swiper-button-next {
     right: 20%;
   }
 }
+@media screen and (max-width: 768px) {
+  main .customer .swiper-button-next {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  main .customer .swiper-button-next {
+    display: none;
+  }
+}
+main .customer .swiper-button-next:hover {
+  background-color: #F53838;
+}
 main .customer .swiper-button-next::after {
   content: "";
 }
@@ -692,6 +740,19 @@ main .customer .swiper-button-prev {
     right: 30%;
   }
 }
+@media screen and (max-width: 768px) {
+  main .customer .swiper-button-prev {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  main .customer .swiper-button-prev {
+    display: none;
+  }
+}
+main .customer .swiper-button-prev:hover {
+  background-color: #F53838;
+}
 main .customer .swiper-button-prev::after {
   content: "";
 }
@@ -713,6 +774,18 @@ main .customer .swiper-pagination {
     right: 55%;
   }
 }
+@media screen and (max-width: 768px) {
+  main .customer .swiper-pagination {
+    top: 55%;
+    width: 100%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  main .customer .swiper-pagination {
+    display: none;
+  }
+}
 main .customer .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
@@ -730,6 +803,11 @@ main .customer .subscribe {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+@media screen and (max-width: 540px) {
+  main .customer .subscribe {
+    transform: translate(-50%, 10%);
+  }
+}
 main .customer .container {
   background-color: white;
   border-radius: 10px;
@@ -742,6 +820,11 @@ main .customer .container {
 @media screen and (max-width: 768px) {
   main .customer .container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 540px) {
+  main .customer .container {
+    padding: 10px 16px;
   }
 }
 main .customer .container .subscribe-content {
@@ -788,8 +871,18 @@ footer {
   background: #F8F8F8;
   padding: 200px 0 100px;
 }
+@media screen and (max-width: 540px) {
+  footer {
+    padding: 55px 0;
+  }
+}
 footer .container {
   display: flex;
+}
+@media screen and (max-width: 540px) {
+  footer .container {
+    flex-direction: column;
+  }
 }
 footer .container .footer-about .about-img {
   margin-bottom: 20px;

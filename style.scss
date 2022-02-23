@@ -24,6 +24,10 @@ p {
     margin: 0 auto;
 }
 
+.hueR {
+    filter: hue-rotate(3.142rad);
+}
+
 header {
     padding: 0 15px;
     .container {
@@ -67,6 +71,9 @@ header {
                 text-transform: capitalize;
                 background: transparent;
                 border: none;
+                @include breackpoint(mobile) {
+                    padding: 10px 16px;
+                }
                 &:hover {
                     border: 1px solid #F53855;
                     padding: 12px 39px;
@@ -284,6 +291,9 @@ main {
         margin-top: 80px;
         padding: 80px 0;
         text-align: center;
+        @include breackpoint(mobile) {
+            padding: 16px 0;
+        }
         .container {
             h4 {
                 font-weight: 500;
@@ -327,6 +337,10 @@ main {
                     }
                     @include breackpoint(mobileland) {
                         min-height: 510px;
+                    }
+                    @include breackpoint(mobile) {
+                        min-height: 550px;
+                        margin-bottom: 24px;
                     }
                     &:hover {
                         border: 2px solid #F53838;
@@ -435,6 +449,9 @@ main {
     .network {
         margin-top: 70px;
         text-align: center;
+        @include breackpoint(mobile) {
+            margin-top: 16px;
+        }
         h4 {
             font-weight: 500;
             font-size: 35px;
@@ -474,9 +491,15 @@ main {
         @include breackpoint(tabletland) {
             margin: 50px 0 60px;
         }
+        @include breackpoint(mobile) {
+            margin: 50px 0;
+        }
         .swiper-container {
             width: 100%;
             padding: 0 20px;
+            @include breackpoint(mobile) {
+                padding: 0;
+            }
         }
         .swiper-slide {
             background-size: cover;
@@ -494,6 +517,7 @@ main {
     .customer {
         position: relative;
         text-align: center;
+        // margin-bottom: 300px;
         h4 {
             font-weight: 500;
             font-size: 35px;
@@ -607,6 +631,15 @@ main {
                 @include breackpoint(change1) {
                     right: 20%;
                 }
+                @include breackpoint(tablet) {
+                    right: 10px;
+                }
+                @include breackpoint(mobile) {
+                    display: none;
+                }
+                &:hover {
+                    background-color: #F53838;
+                }
                 &::after {
                     content: '';
                 }
@@ -630,6 +663,15 @@ main {
                 @include breackpoint(change1) {
                     right: 30%;
                 }
+                @include breackpoint(tablet) {
+                    left: 10px;
+                }
+                @include breackpoint(mobile) {
+                    display: none;
+                }
+                &:hover {
+                    background-color: #F53838;
+                }
                 &::after {
                     content: '';
                 }
@@ -648,6 +690,14 @@ main {
                 left: auto;
                 @include breackpoint(change1) {
                     right: 55%;
+                }
+                @include breackpoint(tablet) {
+                    top: 55%;
+                    width: 100%;
+                    right: 0;
+                }
+                @include breackpoint(mobile) {
+                    display: none;
                 }
             }
             &-pagination-bullet {
@@ -668,6 +718,9 @@ main {
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 50%);
+            @include breackpoint(mobile) {
+                transform: translate(-50%, 10%);
+            }
         }
         .container {
             background-color: white;
@@ -679,6 +732,9 @@ main {
             box-shadow: 0px 27px 50px -38px #bcbbbb;
             @include breackpoint(tablet) {
                 flex-direction: column;
+            }
+            @include breackpoint(mobile) {
+                padding: 10px 16px;
             }
             .subscribe-content {
                 text-align: left;
@@ -722,8 +778,14 @@ main {
 footer {
     background: #F8F8F8;
     padding: 200px 0 100px;
+    @include breackpoint(mobile) {
+        padding: 55px 0;
+    }
     .container {
         display: flex;
+        @include breackpoint(mobile) {
+            flex-direction: column;
+        }
         .footer-about {
             .about-img {
                 margin-bottom: 20px;

@@ -44,6 +44,7 @@
             </div>
         </header>
         <main>
+
             <section class="start">
                 <div class="container">
                     <div class="col start-content">
@@ -393,7 +394,7 @@
                         </div>
                     </div>
                     <div class="swiper-button-next">
-                        <img src="./images/next.svg" alt="">
+                        <img src="./images/next.svg" alt="" class="huer">
                     </div>
                     <div class="swiper-button-prev">
                         <img src="./images/prev.svg" alt="">
@@ -527,17 +528,7 @@
 
         });
     </script>
-    <script>
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            var headerHeight = $(".header").outerHeight();
-            if (scroll > headerHeight) {
-                $(".header").addClass("fixed");
-            } else {
-                $(".header").removeClass("fixed");
-            }
-        });
-    </script>
+
 </body>
 
 </html>
