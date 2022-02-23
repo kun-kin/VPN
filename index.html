@@ -490,14 +490,21 @@
                 clickable: true,
             },
 
-            breakpoint: {
-                767: {
-                    slidesPerView: 4,
+            breakpoints: {
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
                 },
                 540: {
                     slidesPerView: 3,
+                    spaceBetween: 50,
                 },
-            },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+
+            }
 
         });
 
@@ -516,8 +523,7 @@
                 clickable: true,
                 /* enable dot slide */
             },
-            // mousewheel: true,
-            // keyboard: true,
+
 
         });
     </script>

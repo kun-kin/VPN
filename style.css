@@ -1067,7 +1067,7 @@ footer {
 footer .container {
   display: flex;
 }
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 540px) and (max-width: 768px) {
   footer .container {
     flex-direction: column;
   }
