@@ -98,20 +98,19 @@ $hamburger-zindex: $menu-zindex+10;
     }
 }
 
-ul {
-    &:hover {
-        a {
-            opacity: 0.5;
-        }
-    }
-    a {
-        transition: opacity 0.3s ease-in-out;
-        &:hover {
-            opacity: 1;
-        }
-    }
-}
-
+// ul {
+//     &:hover {
+//         a {
+//             opacity: 0.5;
+//         }
+//     }
+//     a {
+//         transition: opacity 0.3s ease-in-out;
+//         &:hover {
+//             opacity: 1;
+//         }
+//     }
+// }
 .main-nav {
     position: relative;
     top: 50%;
