@@ -990,6 +990,9 @@ footer {
         }
         @include breackpoint(mobile) {
             flex-direction: column;
+            .col {
+                padding: 0;
+            }
         }
         .footer-about {
             .about-img {

@@ -1082,6 +1082,9 @@ footer .container {
   footer .container {
     flex-direction: column;
   }
+  footer .container .col {
+    padding: 0;
+  }
 }
 footer .container .footer-about .about-img {
   margin-bottom: 20px;
