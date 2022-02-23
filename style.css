@@ -38,6 +38,12 @@ p {
   /* background: red; */
   z-index: 99999;
 }
+@media screen and (max-width: 540px) {
+  .nav .active {
+    top: 25px;
+    right: 35px;
+  }
+}
 
 .nav-active .active {
   border: 2px solid white;
@@ -1068,6 +1074,11 @@ footer .container {
   display: flex;
 }
 @media screen and (min-width: 540px) and (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 540px) {
   footer .container {
     flex-direction: column;
   }

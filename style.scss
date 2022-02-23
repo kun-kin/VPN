@@ -35,6 +35,10 @@ p {
         right: 15px;
         /* background: red; */
         z-index: 99999;
+        @include breackpoint(mobile) {
+            top: 25px;
+            right: 35px;
+        }
     }
 }
 
@@ -982,6 +986,9 @@ footer {
     .container {
         display: flex;
         @include breackpoint(mobileland) {
+            flex-direction: column;
+        }
+        @include breackpoint(mobile) {
             flex-direction: column;
         }
         .footer-about {
