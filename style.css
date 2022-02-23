@@ -278,11 +278,15 @@ main .start {
 main .start .container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   main .start-content {
     position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 main .start-content .start-content1 {
@@ -418,6 +422,7 @@ main .location .container .location-item .location-content .lc-content span:nth-
 main .features .container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   main .features .container .features-img {
@@ -433,6 +438,9 @@ main .features .container .features-img img {
   main .features .container .features-content {
     position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 main .features .container .features-content h4 {

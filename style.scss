@@ -280,11 +280,15 @@ main {
         .container {
             display: flex;
             align-items: center;
+            position: relative;
         }
         &-content {
             @include breackpoint(tablet) {
                 position: absolute;
                 z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
             .start-content1 {
                 font-size: 50px;
@@ -411,6 +415,7 @@ main {
         .container {
             display: flex;
             align-items: center;
+            position: relative;
             .features-img {
                 @include breackpoint(tablet) {
                     opacity: 0.5;
@@ -425,6 +430,9 @@ main {
                 @include breackpoint(tablet) {
                     position: absolute;
                     z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
                 h4 {
                     font-weight: 500;
