@@ -24,8 +24,179 @@ p {
     margin: 0 auto;
 }
 
-.hueR {
-    filter: hue-rotate(3.142rad);
+.nav {
+    display: none;
+    @include breackpoint(tablet) {
+        display: block;
+    }
+    .active {
+        position: fixed;
+        top: 20px;
+        right: 15px;
+        /* background: red; */
+        z-index: 99999;
+    }
+}
+
+.nav-active .active {
+    border: 2px solid white;
+}
+
+.nav-active .active span::after,
+.nav-active .active span::before {
+    background-color: white;
+}
+
+$menu-zindex: 1100;
+$hamburger-color: #0B132A;
+;
+$hamburger-width: 50px;
+$hamburger-height: 50px;
+$hamburger-zindex: $menu-zindex+10;
+.menu {
+    background: rgb(243, 140, 140);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    // For some sweet fadez
+    visibility: hidden;
+    width: 100%;
+    z-index: $menu-zindex;
+    display: none;
+}
+
+.open {
+    opacity: 1;
+    visibility: visible;
+    @include breackpoint(tablet) {
+        display: block;
+    }
+    li {
+        animation-duration: 1.0s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+    }
+    .btn-toggle {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        a {
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 16px 35px;
+            margin-top: 50px;
+        }
+    }
+}
+
+ul {
+    &:hover {
+        a {
+            opacity: 0.5;
+        }
+    }
+    a {
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.main-nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        color: rgb(255, 255, 255);
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:first {
+            padding-top: 0;
+        }
+    }
+}
+
+// Hamburger menu toggler stuff below
+.toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    // float: right;
+    height: 50px;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    position: relative;
+    vertical-align: middle;
+    width: $hamburger-width;
+    z-index: $hamburger-zindex;
+    span {
+        background-color: $hamburger-color;
+        content: "";
+        display: block;
+        height: 2px;
+        left: calc(50% - 13px);
+        position: absolute;
+        top: calc(50% - 1px);
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+        width: 26px;
+        &:before,
+        &:after {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+            width: 26px;
+        }
+        &:before {
+            top: 7px;
+        }
+        &:after {
+            top: -7px;
+        }
+    }
+}
+
+.active {
+    // background-color: yellow;
+    border: 2px solid #0B132A;
+    border-radius: 50%;
+    span {
+        background-color: transparent;
+        transition: background 0.2s ease-out;
+        &:before,
+        &:after {
+            transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+        }
+        &:before {
+            top: 0;
+            transform: rotate3d(0, 0, 1, -45deg);
+        }
+        &:after {
+            top: 0;
+            transform: rotate3d(0, 0, 1, 45deg);
+        }
+    }
 }
 
 header {
@@ -60,6 +231,9 @@ header {
             }
         }
         .header-connect {
+            @include breackpoint(tablet) {
+                display: none;
+            }
             button {
                 display: inline-block;
                 padding: 13px 40px;
@@ -314,10 +488,11 @@ main {
                 }
             }
             .plan-card {
-                display: flex;
-                justify-content: space-around;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
                 @include breackpoint(mobile) {
-                    flex-direction: column;
+                    grid-template-columns: repeat(1, 1fr);
                 }
                 .plan-card-item {
                     position: relative;
@@ -325,6 +500,7 @@ main {
                     min-height: 670px;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     background: #FFFFFF;
                     border: 2px solid #DDDDDD;
                     border-radius: 10px;
@@ -628,6 +804,12 @@ main {
                 top: 65%;
                 right: 15%;
                 left: auto;
+                .next1 {
+                    display: none;
+                }
+                .next2 {
+                    transform: rotate(180deg) translate(10px, 10px);
+                }
                 @include breackpoint(change1) {
                     right: 20%;
                 }
@@ -639,6 +821,12 @@ main {
                 }
                 &:hover {
                     background-color: #F53838;
+                    .next1 {
+                        display: block;
+                    }
+                    .next2 {
+                        display: none;
+                    }
                 }
                 &::after {
                     content: '';
@@ -660,6 +848,9 @@ main {
                 top: 65%;
                 right: 20%;
                 left: auto;
+                .prev2 {
+                    display: none;
+                }
                 @include breackpoint(change1) {
                     right: 30%;
                 }
@@ -671,6 +862,13 @@ main {
                 }
                 &:hover {
                     background-color: #F53838;
+                    .prev2 {
+                        display: block;
+                        transform: rotate(180deg) translate(10px, 10px);
+                    }
+                    .prev1 {
+                        display: none;
+                    }
                 }
                 &::after {
                     content: '';
@@ -809,6 +1007,7 @@ footer {
                         height: 34px;
                         background-color: red;
                         border-radius: 50%;
+                        margin: 0 -4px;
                     }
                     img {
                         width: 100%;

@@ -41,8 +41,40 @@
                     <button class="btn-signin">sign in</button>
                     <button class="btn-signup">sign up</button>
                 </div>
+                <nav class="nav">
+                    <button class="toggle">
+                      <span></span>
+                    </button>
+                </nav>
             </div>
         </header>
+        <div id="menu" class="menu">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#"> About</a>
+                    </li>
+                    <li>
+                        <a href="#"> Features</a>
+                    </li>
+
+                    <li>
+                        <a href="#"> Pricing </a>
+                    </li>
+                    <li>
+                        <a href="#"> Testimonials </a>
+                    </li>
+                    <li>
+                        <a href="#"> Help </a>
+                    </li>
+                    <li class="btn-toggle">
+                        <a href="#">sign in</a>
+                        <a href="#">sign up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <main>
 
             <section class="start">
@@ -348,56 +380,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="600">
-                            <div class="customer-card">
-                                <div class="card-profile">
-                                    <div class="img-profile">
-                                        <img src="https://th.bing.com/th/id/OIP.Jq-fHtAOWZ6jJwoM5vbZBgHaJQ?pid=ImgDet&rs=1" alt="">
-                                    </div>
-                                    <div class="card-infor">
-                                        <div class="card-infor-left">
-                                            <p>Viezh Robert</p>
-                                            <p>Warsaw, Poland</p>
-                                        </div>
-                                        <div class="card-infor-right">
-                                            <span>4.5</span>
-                                            <img src="./images/star.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
-                            <div class="customer-card">
-                                <div class="card-profile">
-                                    <div class="img-profile">
-                                        <img src="https://th.bing.com/th/id/OIP.Jq-fHtAOWZ6jJwoM5vbZBgHaJQ?pid=ImgDet&rs=1" alt="">
-                                    </div>
-                                    <div class="card-infor">
-                                        <div class="card-infor-left">
-                                            <p>Viezh Robert</p>
-                                            <p>Warsaw, Poland</p>
-                                        </div>
-                                        <div class="card-infor-right">
-                                            <span>4.5</span>
-                                            <img src="./images/star.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.</p>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
                     <div class="swiper-button-next">
-                        <img src="./images/next.svg" alt="" class="huer">
+                        <img src="./images/next.svg" alt="" class="next1">
+                        <img src="./images/prev.svg" alt="" class="next2">
                     </div>
                     <div class="swiper-button-prev">
-                        <img src="./images/prev.svg" alt="">
+                        <img src="./images/prev.svg" alt="" class="prev1">
+                        <img src="./images/next.svg" alt="" class="prev2">
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -423,17 +415,17 @@
                     <p class="ab1"> <span>LaslesVPN</span> is a private virtual network that <br> has unique features and has high security.</p>
                     <div class="social">
                         <div class="social-btn facebook">
-                            <a href="">
+                            <a href="#">
                                 <img src="./images/face.svg" alt="">
                             </a>
                         </div>
                         <div class="social-btn twitter">
-                            <a href="">
+                            <a href="#">
                                 <img src="./images/twitter.svg" alt="">
                             </a>
                         </div>
                         <div class="social-btn instagam">
-                            <a href="">
+                            <a href="#">
                                 <img src="./images/insta.svg" alt="">
                             </a>
                         </div>
@@ -478,14 +470,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         AOS.init();
     </script>
     <script>
         var Swipes = new Swiper(".swiper-container", {
-            direction: "horizontal",
+            // direction: "horizontal",
             loop: true,
-            autoplay: true,
+            // autoplay: true,
             spaceBetween: "10%",
             slidesPerView: 5,
             slidesPerGroup: 1,
@@ -498,10 +491,10 @@
             },
 
             breakpoint: {
-                '767': {
+                767: {
                     slidesPerView: 4,
                 },
-                '540': {
+                540: {
                     slidesPerView: 3,
                 },
             },
@@ -528,7 +521,13 @@
 
         });
     </script>
-
+    <script>
+        $(".toggle").click(function() {
+            $(".toggle").toggleClass("active");
+            $('.menu').toggleClass('open');
+            $('.nav').toggleClass('nav-active');
+        });
+    </script>
 </body>
 
 </html>
