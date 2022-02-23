@@ -409,6 +409,7 @@ main .location .container .location-item .location-content .lc-content span:nth-
   line-height: 30px;
   /* identical to box height, or 120% */
   color: #0B132A;
+  display: flex;
 }
 main .location .container .location-item .location-content .lc-content span:nth-child(2) {
   font-size: 20px;

@@ -95,7 +95,7 @@
                         <div class="location-content">
                             <div class="lc-img"><img src="./images/location1.svg" alt=""></div>
                             <div class="lc-content">
-                                <span>90+</span>
+                                <span><p class="number">90</p>+</span>
                                 <span>User</span>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                         <div class="location-content">
                             <div class="lc-img"><img src="./images/location2.svg" alt=""></div>
                             <div class="lc-content">
-                                <span>30+</span>
+                                <span><p class="number">30</p>+</span>
                                 <span>Locations</span>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                         <div class="location-content">
                             <div class="lc-img"><img src="./images/location3.svg" alt=""></div>
                             <div class="lc-content">
-                                <span>50+</span>
+                                <span><p class="number">50</p>+</span>
                                 <span>Servers</span>
                             </div>
                         </div>
@@ -474,6 +474,8 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script>
         var Swipes = new Swiper(".swiper-container", {
             // direction: "horizontal",
@@ -532,6 +534,11 @@
             $(".toggle").toggleClass("active");
             $('.menu').toggleClass('open');
             $('.nav').toggleClass('nav-active');
+        });
+    </script>
+    <script>
+        $(".number").counterUp({
+            time: 3000
         });
     </script>
 </body>
