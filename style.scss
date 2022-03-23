@@ -212,8 +212,6 @@ header {
         .header-menu {
             display: flex;
             gap: 40px;
-            font-size: 16px;
-            line-height: calc(19/16);
             margin-bottom: 0;
             @include breackpoint(tabletland) {
                 gap: 20px;
@@ -227,8 +225,12 @@ header {
                 a {
                     text-decoration: none;
                     color: #4F5665;
+                    font-size: 16px;
+                    // font-weight: 500;
+                    line-height: calc(19/16);
                     &:hover {
-                        color: #F53855;
+                        color: #0B132A;
+                        font-weight: 500;
                     }
                 }
             }

@@ -194,8 +194,6 @@ header .container {
 header .container .header-menu {
   display: flex;
   gap: 40px;
-  font-size: 16px;
-  line-height: 1.1875;
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -215,9 +213,12 @@ header .container .header-menu .list {
 header .container .header-menu .list a {
   text-decoration: none;
   color: #4F5665;
+  font-size: 16px;
+  line-height: 1.1875;
 }
 header .container .header-menu .list a:hover {
-  color: #F53855;
+  color: #0B132A;
+  font-weight: 500;
 }
 @media screen and (max-width: 768px) {
   header .container .header-connect {
